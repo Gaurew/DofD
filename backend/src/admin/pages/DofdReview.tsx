@@ -194,6 +194,28 @@ const DofdReview = () => {
     fetchList();
   }, [fetchList]);
 
+  React.useEffect(() => {
+    if (selected) {
+      return;
+    }
+    const timer = setInterval(() => {
+      fetchList();
+    }, 15000);
+    return () => clearInterval(timer);
+  }, [selected, fetchList]);
+
+  const selectedId = selected?.documentId || null;
+
+  React.useEffect(() => {
+    if (!selectedId) {
+      return;
+    }
+    const timer = setInterval(() => {
+      fetchDetail(selectedId);
+    }, 7000);
+    return () => clearInterval(timer);
+  }, [selectedId, fetchDetail]);
+
   const recordDecision = async (decision: 'approved' | 'rejected') => {
     if (!selected) {
       return;
