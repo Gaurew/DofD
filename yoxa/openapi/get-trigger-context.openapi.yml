@@ -3,7 +3,7 @@ info:
   title: Get Trigger Context
   version: 1.0.0
 servers:
-  - url: https://REPLACE-WITH-RENDER-STRAPI.onrender.com
+  - url: https://dofd.onrender.com
 paths:
   /api/yoxa-tools/submission-context:
     post:
