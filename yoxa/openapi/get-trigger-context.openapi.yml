@@ -1,0 +1,79 @@
+openapi: 3.1.0
+info:
+  title: Get Trigger Context
+  version: 1.0.0
+servers:
+  - url: https://REPLACE-WITH-RENDER-STRAPI.onrender.com
+paths:
+  /api/yoxa-tools/submission-context:
+    post:
+      operationId: getTriggerContext
+      summary: Fetch original founder and startup fields for a Dreamer submission
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [submissionId]
+              properties:
+                submissionId:
+                  type: string
+                  description: Strapi Dreamer Submission documentId from trigger_text DofD Submission ID.
+      responses:
+        '200':
+          description: Submission context found.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                required: [found, submissionId]
+                properties:
+                  found:
+                    type: boolean
+                  submissionId:
+                    type: string
+                  firstName:
+                    type: [string, 'null']
+                  lastName:
+                    type: [string, 'null']
+                  email:
+                    type: [string, 'null']
+                  profileLink:
+                    type: [string, 'null']
+                  startupName:
+                    type: [string, 'null']
+                  startupWebsite:
+                    type: [string, 'null']
+                  startDate:
+                    type: [string, 'null']
+                  startupVision:
+                    type: [string, 'null']
+                  founderBackground:
+                    type: [string, 'null']
+                  connectionSources:
+                    type: array
+                    items:
+                      type: string
+                  referredBy:
+                    type: [string, 'null']
+                  otherSource:
+                    type: [string, 'null']
+                  yoxaTriggerStatus:
+                    type: [string, 'null']
+                  reviewStatus:
+                    type: [string, 'null']
+                  yoxaWorkflowRunId:
+                    type: [string, 'null']
+                  createdAt:
+                    type: [string, 'null']
+components:
+  securitySchemes:
+    dofdToolApiKey:
+      type: apiKey
+      in: header
+      name: X-DofD-Yoxa-Tool-Key
+security:
+  - dofdToolApiKey: []

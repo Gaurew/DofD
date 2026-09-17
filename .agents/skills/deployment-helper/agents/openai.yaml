@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yoxa Deployment Helper"
+  short_description: "Map Yoxa workflows to client APIs"
+  default_prompt: "Use $deployment-helper to connect this Yoxa workflow to my application safely."

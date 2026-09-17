@@ -1,0 +1,135 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dreamer_submissions",
+  "info": {
+    "singularName": "dreamer-submission",
+    "pluralName": "dreamer-submissions",
+    "displayName": "Dreamer Submission",
+    "description": "A Democracy of Dreams form submission that triggers a Yoxa workflow."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "profileLink": {
+      "type": "string"
+    },
+    "startupName": {
+      "type": "string",
+      "required": true
+    },
+    "startupWebsite": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "startupVision": {
+      "type": "text"
+    },
+    "founderBackground": {
+      "type": "text"
+    },
+    "connectionSources": {
+      "type": "json"
+    },
+    "referredBy": {
+      "type": "string"
+    },
+    "otherSource": {
+      "type": "string"
+    },
+    "supportingFile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "yoxaTriggerStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "accepted",
+        "failed",
+        "output_received",
+        "connector_error"
+      ],
+      "default": "pending",
+      "required": true
+    },
+    "reviewStatus": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "reports_generated",
+        "approved",
+        "rejected",
+        "failed"
+      ],
+      "default": "new",
+      "required": true
+    },
+    "decision": {
+      "type": "enumeration",
+      "enum": [
+        "approved",
+        "rejected"
+      ]
+    },
+    "decisionNote": {
+      "type": "text"
+    },
+    "decidedAt": {
+      "type": "datetime"
+    },
+    "decidedBy": {
+      "type": "string"
+    },
+    "yoxaWorkflowRunId": {
+      "type": "string"
+    },
+    "yoxaTriggerAttemptId": {
+      "type": "string"
+    },
+    "yoxaTriggerError": {
+      "type": "json"
+    },
+    "latestOutputSummary": {
+      "type": "text"
+    },
+    "latestOutputText": {
+      "type": "richtext"
+    },
+    "latestOutputJson": {
+      "type": "json"
+    },
+    "workflowEvents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::workflow-event.workflow-event",
+      "mappedBy": "submission"
+    },
+    "workflowReports": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::workflow-report.workflow-report",
+      "mappedBy": "submission"
+    }
+  }
+}

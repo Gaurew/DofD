@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workflow_events",
+  "info": {
+    "singularName": "workflow-event",
+    "pluralName": "workflow-events",
+    "displayName": "Workflow Event",
+    "description": "Timeline event for a Dreamer submission and Yoxa workflow activity."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventType": {
+      "type": "enumeration",
+      "enum": [
+        "submission_created",
+        "trigger_accepted",
+        "trigger_failed",
+        "connector_output",
+        "connector_error",
+        "report_received",
+        "decision_recorded"
+      ],
+      "required": true
+    },
+    "status": {
+      "type": "string"
+    },
+    "toolName": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "outputText": {
+      "type": "richtext"
+    },
+    "outputJson": {
+      "type": "json"
+    },
+    "rawPayload": {
+      "type": "json"
+    },
+    "workflowRunId": {
+      "type": "string"
+    },
+    "triggerAttemptId": {
+      "type": "string"
+    },
+    "submission": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dreamer-submission.dreamer-submission",
+      "inversedBy": "workflowEvents"
+    }
+  }
+}

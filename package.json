@@ -1,0 +1,12 @@
+{
+  "name": "dofd-strapi-yoxa-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lightweight Democracy of Dreams Strapi + Yoxa integration demo.",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:backend": "npm --prefix backend run develop",
+    "dev:frontend": "node scripts/static-server.mjs",
+    "test:api": "node scripts/test-api.mjs"
+  }
+}

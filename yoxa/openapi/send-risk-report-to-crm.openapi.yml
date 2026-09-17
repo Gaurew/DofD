@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: Send Risk Report to CRM
+  version: 1.0.0
+servers:
+  - url: https://REPLACE-WITH-RENDER-STRAPI.onrender.com
+paths:
+  /api/yoxa-tools/reports:
+    post:
+      operationId: sendRiskReportToCrm
+      summary: Persist generated compliance and risk report against a Dreamer submission
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [submissionId]
+              properties:
+                submissionId:
+                  type: string
+                  description: Strapi Dreamer Submission documentId from trigger_text DofD Submission ID.
+                sourceTool:
+                  type: string
+                  description: Calling workflow tool name, e.g. Send Risk Report to CRM.
+                summary:
+                  type: string
+                  description: Short human-readable summary for the timeline event.
+      responses:
+        '200':
+          description: Report stored or Connection Check OK.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                required: [success, message, submissionId]
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  submissionId:
+                    type: string
+                  reportId:
+                    type: [string, 'null']
+                  fileName:
+                    type: [string, 'null']
+                  fileUrl:
+                    type: [string, 'null']
+                  eventId:
+                    type: [string, 'null']
+components:
+  securitySchemes:
+    dofdToolApiKey:
+      type: apiKey
+      in: header
+      name: X-DofD-Yoxa-Tool-Key
+security:
+  - dofdToolApiKey: []

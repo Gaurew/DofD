@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Democracy of Dreams | Path of Dreamer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Democracy of Dreams home">
+        <img class="brand-logo" src="https://www.democracyofdreams.com/media/icons/logo.svg" alt="Democracy of Dreams" />
+      </a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="#top">Home</a>
+        <a href="#form">Elevated Experiences</a>
+        <a href="#form">Intentional Impact</a>
+        <a href="#footer">Dream Team</a>
+        <a href="#footer">Our Story</a>
+        <a href="#" id="admin-login-link">Admin Login</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <h1 id="hero-title">Share Your Vision and Find Your People</h1>
+          <p class="note">
+            <strong>Note:</strong> Joining the platform is free. All information shared is used solely to
+            communicate with you and support your participation in our community.
+          </p>
+          <p>
+            You're ready to take your startup to the next stage, and we're here to help you do it.
+            By listing your startup on Democracy of Dreams, you'll join a community that believes in
+            creating real impact while helping visionary entrepreneurs succeed. You'll gain access to
+            an exclusive global network of professionals and advisors who have guided companies
+            worldwide to growth and success.
+          </p>
+          <p>
+            As a member, you may also connect with aligned investors or even qualify to become a
+            supported portfolio company within one of our impact-driven funds. Our platform gives
+            you a voice, visibility, and access to meaningful connections with like-minded
+            entrepreneurs who share your drive to create positive change.
+          </p>
+          <p>
+            Within our network, you'll also find valuable free content and professional services
+            designed specifically for startups: all aimed at helping you accelerate your journey.
+            The more Dreamers who join, the stronger and more powerful our collective community
+            becomes.
+          </p>
+        </div>
+      </section>
+
+      <section class="form-section" id="form">
+        <div class="form-shell">
+          <h2>Tell us more about your startup dream by completing the information below.</h2>
+
+          <form id="dreamer-form">
+            <div class="section-title">
+              <h3>Your Personal Information</h3>
+              <span aria-hidden="true"></span>
+            </div>
+
+            <label class="field full">
+              <span>First Name <b>*</b></span>
+              <input name="firstName" type="text" placeholder="example: Inaya" required />
+              <small>Your first name.</small>
+            </label>
+
+            <label class="field full">
+              <span>Last Name <b>*</b></span>
+              <input name="lastName" type="text" placeholder="example: Kahn" required />
+              <small>Your last name.</small>
+            </label>
+
+            <label class="field full">
+              <span>Contact Email <b>*</b></span>
+              <input name="email" type="email" placeholder="example: ceo@foodboxwebsite.in" required />
+              <small>Valid email address we can verify.</small>
+            </label>
+
+            <label class="field full">
+              <span>Professional Profile Link</span>
+              <input name="profileLink" type="url" placeholder="example: http://linkedin.com/username" />
+              <small>We would love to see your professional profile if you have one, it's optional though.</small>
+            </label>
+
+            <div class="section-title">
+              <h3>About Your Startup</h3>
+              <span aria-hidden="true"></span>
+            </div>
+
+            <label class="field full">
+              <span>StartUp Name <b>*</b></span>
+              <input name="startupName" type="text" placeholder="example: Foodbox Example Ltd." required />
+              <small>Legal name would be preferred.</small>
+            </label>
+
+            <label class="field full">
+              <span>StartUp Website</span>
+              <input name="startupWebsite" type="url" placeholder="example: https://foodboxwebsite.in" />
+              <small>If you have a website we will validate the url. If you don't have one yet don't worry.</small>
+            </label>
+
+            <label class="field full">
+              <span>Startup Start Date <b>*</b></span>
+              <input name="startDate" type="date" required />
+              <small>The date you registered the StartUp.</small>
+            </label>
+
+            <label class="field full">
+              <span>Startup Vision</span>
+              <textarea
+                name="startupVision"
+                rows="6"
+                placeholder="Tell us the dream, the people you serve, and the change you are building toward."
+              ></textarea>
+              <small>Share the problem you are solving, who you serve, and the future you are trying to create.</small>
+            </label>
+
+            <label class="field full">
+              <span>Founder Background</span>
+              <textarea
+                name="founderBackground"
+                rows="4"
+                placeholder="Share relevant founder experience, traction, or context."
+              ></textarea>
+              <small>Include experience, milestones, traction, or personal context that helps us understand your journey.</small>
+            </label>
+
+            <label class="field full">
+              <span>Upload Pitch/Profile PDF</span>
+              <input name="supportingFile" type="file" accept=".pdf,.doc,.docx,.txt,.md" />
+              <small>Optional. Add a pitch deck, company profile, or short supporting document if you have one.</small>
+            </label>
+
+            <div class="section-title">
+              <h3>Democracy of Dreams Connection</h3>
+              <span aria-hidden="true"></span>
+            </div>
+
+            <p class="section-hint">Tell us how you heard about us?</p>
+
+            <fieldset class="checkbox-panel">
+              <legend>Connection Source</legend>
+              <label><input type="checkbox" name="connectionSource" value="Internet Search" /> Internet Search</label>
+              <label><input type="checkbox" name="connectionSource" value="LinkedIn" /> LinkedIn</label>
+              <label><input type="checkbox" name="connectionSource" value="Instagram" /> Instagram</label>
+              <label><input type="checkbox" name="connectionSource" value="Substack" /> Substack</label>
+              <label><input type="checkbox" name="connectionSource" value="AI Agent" /> AI Agent</label>
+              <label><input type="checkbox" name="connectionSource" value="Email" /> Email</label>
+            </fieldset>
+
+            <label class="field full">
+              <span>Referred to by</span>
+              <input name="referredBy" type="text" placeholder="example: friend name" />
+              <small>Any referral source is good to know.</small>
+            </label>
+
+            <label class="field full">
+              <span>Any other</span>
+              <input name="otherSource" type="text" placeholder="example: magazine or advertisement" />
+              <small>Any other source of connection is great to know.</small>
+            </label>
+
+            <label class="captcha">
+              <input type="checkbox" name="captcha" required />
+              <span>I'm not a robot</span>
+              <span class="captcha-mark" aria-hidden="true">reCAPTCHA</span>
+            </label>
+
+            <button class="submit-button" type="submit">
+              <span>Submit</span>
+              <span aria-hidden="true">&nearr;</span>
+            </button>
+
+            <output class="response-box" id="response-box" for="dreamer-form" hidden></output>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="footer-top">
+        <div>
+          <div class="brand footer-brand">
+            <img class="brand-logo" src="https://www.democracyofdreams.com/media/icons/logo.svg" alt="Democracy of Dreams" />
+          </div>
+          <div class="footer-links">
+            <a href="#top">Our Impact &nearr;</a>
+            <a href="#form">Media Inquiry &nearr;</a>
+          </div>
+          <div class="socials" aria-label="Social links">
+            <span>in</span>
+            <span>&#9648;</span>
+            <span>&#9678;</span>
+          </div>
+        </div>
+
+        <div class="footer-cta">
+          <p>Become a friend of Democracy of dreams or apply to join the Dream Team exclusive network.</p>
+          <div>
+            <a href="#form">Join Our Community &nearr;</a>
+            <a href="#form">Nominate Your Startup &nearr;</a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 Democracy of Dreams. All Rights Reserved. Powered by Orangesoft.</p>
+    </footer>
+
+    <script>
+      // Render-ready: override with window.__DOFD_STRAPI_BASE_URL before this script,
+      // or replace DEFAULT_STRAPI_BASE_URL after first Render deploy.
+      const DEFAULT_STRAPI_BASE_URL = "https://REPLACE-WITH-RENDER-STRAPI.onrender.com";
+      const STRAPI_BASE_URL = String(
+        window.__DOFD_STRAPI_BASE_URL || DEFAULT_STRAPI_BASE_URL
+      ).replace(/\/$/, "");
+      const STRAPI_SUBMIT_ENDPOINT = `${STRAPI_BASE_URL}/api/dreamer-submissions/submit`;
+
+      const adminLoginLink = document.querySelector("#admin-login-link");
+      if (adminLoginLink) {
+        adminLoginLink.href = `${STRAPI_BASE_URL}/admin`;
+        adminLoginLink.target = "_blank";
+        adminLoginLink.rel = "noopener";
+      }
+
+      const form = document.querySelector("#dreamer-form");
+      const output = document.querySelector("#response-box");
+      const submitButton = document.querySelector(".submit-button");
+
+      const showStatus = (kind, message) => {
+        output.hidden = false;
+        output.className = `response-box ${kind}`;
+        output.textContent = message;
+      };
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const data = new FormData(form);
+
+        submitButton.disabled = true;
+        showStatus("pending", "Submitting your dream profile...");
+
+        try {
+          const response = await fetch(STRAPI_SUBMIT_ENDPOINT, {
+            method: "POST",
+            body: data
+          });
+
+          const responseText = await response.text();
+          let parsed;
+          try {
+            parsed = JSON.parse(responseText);
+          } catch {
+            parsed = null;
+          }
+
+          if (!response.ok) {
+            const message =
+              parsed?.message || "We could not submit the form right now. Please try again in a moment.";
+            showStatus("error", message);
+            return;
+          }
+
+          console.info("Dreamer submission accepted by Strapi", {
+            submissionId: parsed?.submissionId,
+            response: parsed
+          });
+          showStatus(
+            "success",
+            "Thank you. Your dream profile has been submitted successfully."
+          );
+        } catch (error) {
+          showStatus(
+            "error",
+            "We could not submit the form right now. Please try again in a moment."
+          );
+        } finally {
+          submitButton.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

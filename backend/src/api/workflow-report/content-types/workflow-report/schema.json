@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workflow_reports",
+  "info": {
+    "singularName": "workflow-report",
+    "pluralName": "workflow-reports",
+    "displayName": "Workflow Report",
+    "description": "A generated report file received from a Yoxa workflow tool."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "submission": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dreamer-submission.dreamer-submission",
+      "inversedBy": "workflowReports"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "originalFilename": {
+      "type": "string",
+      "required": true
+    },
+    "fileType": {
+      "type": "enumeration",
+      "enum": [
+        "pdf",
+        "html"
+      ],
+      "required": true
+    },
+    "sourceTool": {
+      "type": "string"
+    },
+    "receivedAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "rawMetadata": {
+      "type": "json"
+    }
+  }
+}
