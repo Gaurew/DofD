@@ -50,8 +50,6 @@ services:
           name: dofd-db
           property: connectionString
       - key: DATABASE_SSL
-        value: true
-      - key: DATABASE_SSL_REJECT_UNAUTHORIZED
         value: false
       - key: YOXA_TRIGGER_ENDPOINT
         sync: false
