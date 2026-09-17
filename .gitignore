@@ -6,7 +6,6 @@ backend/.tmp/
 backend/.strapi-updater.json
 backend/build/
 backend/dist/
-backend/public/uploads/
 backend/.env
 frontend/.cache/
 npm-debug.log*
